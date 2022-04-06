@@ -23,15 +23,20 @@ eta = parseInt(prompt("Inserire la tua età"));
 console.log(eta);
 document.getElementById("eta-cliente").innerHTML = eta;
 
+// controllo se i dati siano numeri
+if (isNaN(eta)){
+  alert("Valori non validi, inserire un numero")
+}
+
 km = parseInt(prompt("Inserire i km da fare"));
 console.log(km);
 document.getElementById("km-cliente").innerHTML = km;
 
 // controllo se i dati siano numeri
-
-if (isNaN(eta) || isNaN(km)){
+if (isNaN(km)){
   alert("Valori non validi, inserire un numero")
 }
+
 
 // prezzo normale
 let prezzoBiglietto = km * 0.21;
