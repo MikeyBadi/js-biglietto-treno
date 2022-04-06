@@ -1,0 +1,27 @@
+
+body{
+  background-image: url(../img/Ticket1.png);
+  background-size: 100%;
+  background-attachment: fixed;
+}
+
+.tiket{
+  padding-top: 11%;
+}
+.tiket a{
+  padding-top: 5%;
+}
+
+.time{
+  width: 80%;
+  padding-left: 14.4%;
+  padding-top: 5%;
+}
+
+
+#km-cliente::after{
+  content: ' Km';
+}
+#prezzo-cliente::after{
+  content: ' €';
+}

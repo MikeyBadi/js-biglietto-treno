@@ -8,6 +8,8 @@
   se persona < 18 sconto 20%
 */
 
+
+
 // Chiedere informazioni
 
 let nome, cognome, eta, km;
@@ -25,7 +27,8 @@ document.getElementById("eta-cliente").innerHTML = eta;
 
 // controllo se i dati siano numeri
 if (isNaN(eta)){
-  alert("Valori non validi, inserire un numero")
+  alert("Valori non validi, inserire un numero");
+  eta = parseInt(prompt("Inserire la tua età correttamente"));
 }
 
 km = parseInt(prompt("Inserire i km da fare"));
@@ -34,7 +37,8 @@ document.getElementById("km-cliente").innerHTML = km;
 
 // controllo se i dati siano numeri
 if (isNaN(km)){
-  alert("Valori non validi, inserire un numero")
+  alert("Valori non validi, inserire un numero");
+  km = parseInt(prompt("Inserire nuovamente i km da fare"));
 }
 
 
@@ -59,6 +63,13 @@ if (!isNaN(eta) && !isNaN(km)){
  }
 }
 
- randmMatricola = Math.floor((Math.random() * 99999 )+ 1000);
+randmMatricola = Math.floor((Math.random() * 99999 )+ 1000);
 console.log(matricola);
 document.getElementById("matricola").innerHTML = randmMatricola;
+
+let today = new Date();
+let date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+let dateTime = date+' '+time;
+
+document.getElementById("date-time").innerHTML = dateTime
